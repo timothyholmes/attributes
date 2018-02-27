@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "acc",
+        "e",
+        "ctx",
+        "req",
+        "request",
+        "res",
+        "response",
+        "$scope",
+        "server"
+      ]
+    }],
+    "comma-dangle": ["error", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "only-multiline"
+    }]
+  }
+}

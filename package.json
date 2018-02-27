@@ -1,0 +1,28 @@
+{
+  "name": "attributes",
+  "version": "1.0.0",
+  "description": "Attribute game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "TESTING=true lab -t 90 -e development -L -v -m 5000 ./test",
+    "html": "lab -L -c -r html -e development -o coverage.html -m 5000 ./test && open coverage.html",
+    "docs": "rm -rf ./docs && jsdoc -c ./config/jsdoc.js && open ./docs/index.html"
+  },
+  "author": "Tim Holmes",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "joi": "^13.1.2",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jsdoc": "^3.5.4",
+    "lab": "^13.0.4",
+    "minami": "^1.2.3",
+    "should": "^11.2.1",
+    "sinon": "^2.2.0"
+  }
+}
