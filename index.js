@@ -1,2 +1,2 @@
 
-require('./lib')();
+require('./lib');
