@@ -12,9 +12,11 @@
   "author": "Tim Holmes",
   "license": "ISC",
   "dependencies": {
+    "convict": "^4.2.0",
     "glue": "^5.0.0",
     "joi": "^13.2.0",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "mongodb": "^3.0.7"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^11.3.1",
