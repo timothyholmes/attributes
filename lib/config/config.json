@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": {
+      "default": "3000",
+      "env": "PORT"
+    }
+  },
+  "mongo": {
+    "connectionString": {
+      "default": "mongodb://localhost",
+      "env": "MONGO_HOST"
+    }
+  }
+}
