@@ -9,6 +9,24 @@
     "connectionString": {
       "default": "mongodb://localhost",
       "env": "MONGO_HOST"
+    },
+    "db_name": {
+      "default": "attributes",
+      "env": "MONGO_NAME"
+    }
+  },
+  "jwt": {
+    "internal_key": {
+      "default": "y5G7>WDe)*G(EV@Q",
+      "env": "INTERNAL_KEY"
+    },
+    "public_key": {
+      "default": "n*cX>Wj)g@j(d36e",
+      "env": "PUBLIC_KEY"
+    },
+    "algorithm": {
+      "default": "HS256",
+      "env": "JWT_ALGO"
     }
   }
 }
