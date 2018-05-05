@@ -12,11 +12,17 @@
   "author": "Tim Holmes",
   "license": "ISC",
   "dependencies": {
+    "boom": "^7.2.0",
     "convict": "^4.2.0",
     "glue": "^5.0.0",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
     "joi": "^13.2.0",
+    "jsonwebtoken": "^8.2.1",
     "lodash": "^4.17.5",
-    "mongodb": "^3.0.7"
+    "mongodb": "^3.0.7",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^11.3.1",
