@@ -1,21 +1,41 @@
 swagger: "2.0"
 info:
-  description: "Attributes Game"
-  version: "1.0.0"
-  title: "Attributes Game"
+  description: Attributes Game
+  version: 1.0.0
+  title: Attributes Game
   contact:
-    email: "work@timholm.es"
+    email: work@timholm.es
 paths:
-  /test:
-    get:
+  /campaign:
+    post:
       tags:
-      - "Test"
-      summary: "Test route"
-      description: "Route for test registration"
+      - Campaigns
+      summary: Create campaign
+      description: Creates a new campaign document
       produces:
-      - "application/json"
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: Initial campaign document
+        required: true
+        schema:
+          example:
+            name: Greenwood Boys
+          type: object
+          required:
+          - name
+          properties:
+            name:
+              type: string
       responses:
-        200:
-          description: "successful operation"
+        201:
+          description: Campaign created
           schema:
-            type: boolean
+            example:
+              campaign_id: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+            type: object
+            properties:
+              campaign_id:
+                type: string
+
