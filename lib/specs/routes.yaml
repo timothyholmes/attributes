@@ -1,0 +1,21 @@
+swagger: "2.0"
+info:
+  description: "Attributes Game"
+  version: "1.0.0"
+  title: "Attributes Game"
+  contact:
+    email: "work@timholm.es"
+paths:
+  /test:
+    get:
+      tags:
+      - "Test"
+      summary: "Test route"
+      description: "Route for test registration"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: boolean

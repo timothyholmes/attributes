@@ -10,7 +10,10 @@
   "author": "Tim Holmes",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^17.6.0"
+    "hapi": "^17.6.0",
+    "hapi-openapi": "^1.2.0",
+    "lodash": "^4.17.11",
+    "swagger-parser": "^5.0.6"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^11.3.1",
