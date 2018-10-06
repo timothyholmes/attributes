@@ -71,4 +71,55 @@ paths:
             - valid_attributes
             - players
             $ref: './definitions.yaml#/campaignDocument'
-
+    get:
+      tags:
+      - Campaigns
+      summary: Get campaign document
+      description: Gets campaign document by id
+      produces:
+      - application/json
+      parameters:
+      - name: campaign_id
+        in: path
+        description: Id of  campaign to update
+        required: true
+        type: string
+      responses:
+        200:
+          description: Campaign document
+          schema:
+            required:
+            - _id
+            - name
+            - completed
+            - created_date
+            - refresh_date
+            - valid_attributes
+            - players
+            $ref: './definitions.yaml#/campaignDocument'
+    delete:
+      tags:
+      - Campaigns
+      summary: Delete campaign document
+      description: Marks campaign document for delettion
+      produces:
+      - application/json
+      parameters:
+      - name: campaign_id
+        in: path
+        description: Id of  campaign to update
+        required: true
+        type: string
+      responses:
+        202:
+          description: Campaign document
+          schema:
+            required:
+            - _id
+            - name
+            - completed
+            - created_date
+            - refresh_date
+            - valid_attributes
+            - players
+            $ref: './definitions.yaml#/campaignDocument'
