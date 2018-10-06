@@ -1,1 +1,55 @@
 
+campaignDocument:
+  type: object
+  properties:
+    _id:
+      type: string
+      description: Campaign Id
+      example: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+    name:
+      type: string
+      description: Campaign Name
+      example: Greenwood Boys
+    completed:
+      type: boolean
+      description: Campaign status
+      example: true
+    created_date:
+      type: string
+      description: Created Date
+      example: '2018-10-06T18:50:23.668Z'
+    refresh_date:
+      type: string
+      description: Refresh Date
+      example: '2018-10-06T18:50:23.668Z'
+    valid_attributes:
+      type: array
+      example:
+      - strength
+      - wisdom
+      - speech
+      items:
+        type: string
+    players:
+      type: array
+      items:
+        type: object
+        required:
+        - player_id
+        - active
+        - stats
+        properties:
+          player_id:
+            type: string
+            description: Player id
+            example: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+          active:
+            type: boolean
+            description: Active Player
+            example: true
+          stats:
+            type: object
+            example:
+              wisdom: 3
+              strength: 2
+              speech: 7

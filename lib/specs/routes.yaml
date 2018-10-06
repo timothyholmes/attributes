@@ -7,7 +7,7 @@ info:
     email: work@timholm.es
 paths:
   /campaign:
-    post:
+    put:
       tags:
       - Campaigns
       summary: Create campaign
@@ -38,4 +38,37 @@ paths:
             properties:
               campaign_id:
                 type: string
+  /campaign/{campaign_id}:
+    post:
+      tags:
+      - Campaigns
+      summary: Update campaign document
+      description: Modifies campaign document by id
+      produces:
+      - application/json
+      parameters:
+      - name: campaign_id
+        in: path
+        description: Id of  campaign to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Initial campaign document
+        required: true
+        schema:
+          $ref: './definitions.yaml#/campaignDocument'
+      responses:
+        200:
+          description: Campaign document
+          schema:
+            required:
+            - _id
+            - name
+            - completed
+            - created_date
+            - refresh_date
+            - valid_attributes
+            - players
+            $ref: './definitions.yaml#/campaignDocument'
 
