@@ -123,3 +123,89 @@ paths:
             - valid_attributes
             - players
             $ref: './definitions.yaml#/campaignDocument'
+  /candidate:
+    put:
+      tags:
+      - Candidates
+      summary: Create candidate
+      description: Creates a new candidate document
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: Initial campaign document
+        required: true
+        schema:
+          $ref: './definitions.yaml#/candidateDocument'
+      responses:
+        201:
+          description: Candidate created
+          schema:
+            example:
+              campaign_id: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+            type: object
+            properties:
+              candidate_id:
+                type: string
+  /candidate/{candidate_id}:
+    post:
+      tags:
+      - Candidates
+      summary: Update candidate document
+      description: Modifies candidate document by id
+      produces:
+      - application/json
+      parameters:
+      - name: candidate_id
+        in: path
+        description: Id of  candidate to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Initial candidate document
+        required: true
+        schema:
+          $ref: './definitions.yaml#/candidateDocument'
+      responses:
+        200:
+          description: Candidate document
+          schema:
+            $ref: './definitions.yaml#/candidateDocument'
+    get:
+      tags:
+      - Candidates
+      summary: Get candidate document
+      description: Gets candidate document by id
+      produces:
+      - application/json
+      parameters:
+      - name: candidate_id
+        in: path
+        description: Id of  candidate to update
+        required: true
+        type: string
+      responses:
+        200:
+          description: Candidate document
+          schema:
+            $ref: './definitions.yaml#/candidateDocument'
+    delete:
+      tags:
+      - Candidates
+      summary: Delete candidate document
+      description: Marks candidate document for delettion
+      produces:
+      - application/json
+      parameters:
+      - name: candidate_id
+        in: path
+        description: Id of  candidate to update
+        required: true
+        type: string
+      responses:
+        202:
+          description: Candidate document
+          schema:
+            $ref: './definitions.yaml#/candidateDocument'

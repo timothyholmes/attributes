@@ -10,6 +10,7 @@
   "author": "Tim Holmes",
   "license": "ISC",
   "dependencies": {
+    "boom": "^7.2.0",
     "hapi": "^17.6.0",
     "hapi-openapi": "^1.2.0",
     "lodash": "^4.17.11",

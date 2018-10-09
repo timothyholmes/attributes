@@ -53,3 +53,47 @@ campaignDocument:
               wisdom: 3
               strength: 2
               speech: 7
+
+candidateDocument:
+  type: object
+  properties:
+    _id:
+      type: string
+      description: Candidate Id
+      example: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+    campaign_id:
+      type: string
+      description: Campaign Id
+      example: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+    created_date:
+      type: string
+      description: Created Date
+      example: '2018-10-06T18:50:23.668Z'
+    refresh_date:
+      type: string
+      description: Refresh Date
+      example: '2018-10-06T18:50:23.668Z'
+    approve:
+      type: array
+      example:
+      - 'player-one-guid'
+      - 'player-three-guid'
+      - 'player-four-guid'
+      items:
+        type: string
+    decline:
+      type: array
+      example:
+      - 'player-one-guid'
+      - 'player-three-guid'
+      - 'player-four-guid'
+      items:
+        type: string
+    value:
+      type: array
+      items:
+        type: object
+    approved:
+      type: boolean
+      description: Approval status
+      example: true
