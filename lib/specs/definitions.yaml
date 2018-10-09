@@ -97,3 +97,33 @@ candidateDocument:
       type: boolean
       description: Approval status
       example: true
+
+playerDocument:
+  type: object
+  properties:
+    _id:
+      type: string
+      description: Player Id
+      example: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+    name:
+      type: string
+      description: Player name
+      example: Big T
+    email:
+      type: string
+      description: Player email
+      example: bigt@email.com
+    token:
+      type: string
+      description: Auth token
+      example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+    created_date:
+      type: string
+      description: Created Date
+      example: '2018-10-06T18:50:23.668Z'
+    refresh_date:
+      type: string
+      description: Refresh Date
+      example: '2018-10-06T18:50:23.668Z'
+    history:
+      type: object

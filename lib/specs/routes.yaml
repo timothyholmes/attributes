@@ -134,7 +134,7 @@ paths:
       parameters:
       - in: body
         name: body
-        description: Initial campaign document
+        description: Initial candidate document
         required: true
         schema:
           $ref: './definitions.yaml#/candidateDocument'
@@ -143,7 +143,7 @@ paths:
           description: Candidate created
           schema:
             example:
-              campaign_id: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+              candidate_id: 6bc26e37-acd4-433f-a1bb-458ddc42b405
             type: object
             properties:
               candidate_id:
@@ -209,3 +209,89 @@ paths:
           description: Candidate document
           schema:
             $ref: './definitions.yaml#/candidateDocument'
+  /player:
+    put:
+      tags:
+      - Players
+      summary: Create player
+      description: Creates a new player document
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: Initial player document
+        required: true
+        schema:
+          $ref: './definitions.yaml#/playerDocument'
+      responses:
+        201:
+          description: player created
+          schema:
+            example:
+              player_id: 6bc26e37-acd4-433f-a1bb-458ddc42b405
+            type: object
+            properties:
+              player_id:
+                type: string
+  /player/{player_id}:
+    post:
+      tags:
+      - Players
+      summary: Update player document
+      description: Modifies player document by id
+      produces:
+      - application/json
+      parameters:
+      - name: player_id
+        in: path
+        description: Id of  player to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: Initial player document
+        required: true
+        schema:
+          $ref: './definitions.yaml#/playerDocument'
+      responses:
+        200:
+          description: player document
+          schema:
+            $ref: './definitions.yaml#/playerDocument'
+    get:
+      tags:
+      - Players
+      summary: Get player document
+      description: Gets player document by id
+      produces:
+      - application/json
+      parameters:
+      - name: player_id
+        in: path
+        description: Id of  player to update
+        required: true
+        type: string
+      responses:
+        200:
+          description: player document
+          schema:
+            $ref: './definitions.yaml#/playerDocument'
+    delete:
+      tags:
+      - Players
+      summary: Delete player document
+      description: Marks player document for delettion
+      produces:
+      - application/json
+      parameters:
+      - name: player_id
+        in: path
+        description: Id of  player to update
+        required: true
+        type: string
+      responses:
+        202:
+          description: player document
+          schema:
+            $ref: './definitions.yaml#/playerDocument'
