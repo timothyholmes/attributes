@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "test": "echo \"No Testing Implemented\""
+    "test": "lab -v -t 100 --shuffle -L -P lab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:timothyholmes/attributes.git"
   },
   "author": "Tim Holmes",
   "license": "ISC",
@@ -14,13 +18,16 @@
     "hapi": "^17.6.0",
     "hapi-openapi": "^1.2.0",
     "lodash": "^4.17.11",
+    "mongodb": "^3.1.7",
     "swagger-parser": "^5.0.6"
   },
   "devDependencies": {
+    "code": "^5.2.0",
+    "eslint": "^4.5.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
-    "lab": "^13.0.4",
+    "lab": "^16.1.0",
     "should": "^11.2.1",
-    "sinon": "^2.2.0"
+    "sinon": "^2.4.1"
   }
 }
